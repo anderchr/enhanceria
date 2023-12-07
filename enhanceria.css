@@ -1,0 +1,499 @@
+body{
+  -webkit-print-color-adjust:exact !important;
+  print-color-adjust:exact !important;
+}
+
+:root {
+    --blue: #429cd6 ;      /* Borders and headline */
+    --logoblue: #3075b8 ;  /* Blue color of the Enhanceria logo */
+    --backgray: #e9e9e9 ;  /* Background area for grey areas */
+
+    --innerborder: 0.2ex ; /* Width of inner border of RI card*/
+    --outerborder: 0.4ex ; /* Width of outer border around RI card */
+
+    /* Use with inline in WP  */ 
+    --fullheight: auto ;
+    --showwidth: 75vw ; 
+
+    
+    /* Use normally * /
+    --fullheight: 100vh ;
+    --showwidth: auto ; */ 
+
+}
+
+
+@media print {
+    .contactcard:not(:first-of-type) { page-break-before: always; } /* page-break-after works, as well */
+     * { overflow: visible !important; } 
+}
+
+h2 {
+    color: black ;
+    margin: 1em ; 
+}
+
+div#outerbox {
+}
+
+div#biglist {
+    display: block ;
+}
+
+#NoRiFound {
+    display: none ;
+}
+
+div.contactcard, #NoRiFound {
+    border: var(--outerborder) solid var(--blue) ;
+    border-radius: 5px ;
+    margin: 1ex ;
+    margin-bottom: 2ex; 
+    padding: 0ex ;
+    width: auto; 
+    flex-direction: column ; 
+}
+
+
+div.narrowcol {
+    flex: 0 0 33.4% ;
+    border-left: var(--innerborder) solid var(--blue) ;  
+    border-bottom: var(--innerborder) solid var(--blue) ; 
+    box-sizing: border-box ;
+    overflow-wrap: anywhere ; 
+}
+
+div.narrowcol3 {
+    flex: 0 0 33.4% ;
+    border-left: var(--innerborder) solid var(--blue) ; 
+    box-sizing: border-box ;
+    overflow-wrap: anywhere ; 
+}
+
+.enh_headline {
+
+    background: var(--blue) ;
+    position: relative ; 
+    color: white ;
+    font-family: sans-serif ; 
+    font-weight: bold ;
+    width: 100% ;
+    height: 2.5em ;
+    line-height: 2.5em; 
+    vertical-align: text-bottom ; 
+}
+
+.enh_complete {
+    width: auto ;
+    margin-left: 0.4em ;
+    margin-right: 0.4em ; 
+}
+
+.myDIV1 {
+    width: auto ;
+    margin-left: 0.4em ;
+    margin-right: 0.4em ; 
+}
+
+.brief {
+@media print {
+    display: none ;
+}
+@media screen {
+    display: flex ;
+}
+}
+
+.complete {
+@media print {
+    display: flex ;
+}
+@media screen {
+    display: none ;
+}
+}
+
+.enh_brief, .descrClass {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.enh_inlinelogo {
+    height: 5.5ex;
+    margin-top: -1.6ex ;
+    margin-bottom: -1.8ex ;
+    margin-right: -1.5ex ; 
+}    
+
+.enh_fullxwidthline2 {
+    border-top: var(--innerborder) solid var(--blue) ;    
+}
+
+.enh_fullwidthline:not(:nth-last-child(2)) {
+    box-sizing: border-box ;
+    border-bottom: var(--innerborder) solid var(--blue) ;    
+}
+
+.enh_fullwid2 {
+    flex: 0 0 100% ;
+    width: 100%;
+}
+
+.enh_fullwid4 {
+    flex: 0 0 100% ;
+    width: 100%;
+}
+
+.smallbutton {
+    color: white ;
+    border: 2px solid white ;
+    border-radius: 4pt ;
+    background-color: inherit ;
+    position: absolute ;
+    right: 1em ;
+    top: 18% ; 
+    width: 5em ;
+@media print {
+    display: none ;
+}
+    
+}
+
+.enh_fullwid {
+    flex: 0 0 100% ;
+    width: 100%; 
+    display: flex ; 
+}
+
+.enh_fullwid3 {
+    flex: 0 0 100% ;
+    width: 100%;
+}
+
+.enh_broadleft {
+    border-bottom: var(--innerborder) solid var(--blue) ;
+    box-sizing: border-box ;
+    width: 66.6% ;
+    max-width: 66.6% ; 
+}
+
+.enh_broadleft3 {
+    width: 100% ;
+    max-width: 100% ; 
+}
+
+.enh_broadleft5 {
+    width: 66.6% ;
+    max-width: 66.6% ; 
+}
+
+.enh_broadleft3descr {
+    width: 100% ;
+    max-width: 100% ;
+    max-height: 7.8em ;
+    padding-bottom: 0 ;
+    margin-bottom: 0 ; 
+    overflow-y: hidden ; 
+}
+
+.enh_broadleft3descrComp {
+    width: 100% ;
+    max-width: 100% ;
+}
+
+.enh_stackfield {
+    min-height: 3em ;
+    width: 100% ;
+    position: relative ; 
+}
+
+.enh_broadcol {
+/*    border: .2ex solid green; */
+    flex: 0 0 66.6% ; 
+    display: inline-flex ; 
+    overflow-wrap: anywhere ; 
+    max-height: 17em ; 
+}
+
+.enh_stackbroad {
+    display: flex ;
+    flex-direction: column ;
+    width: 100% ; 
+}
+
+.enh_broadcol2 {
+    flex: 0 0 33.4% ;
+    border-bottom: var(--innerborder) solid var(--blue) ;
+    overflow-wrap: anywhere ; 
+    box-sizing: border-box ;
+}
+
+.enh_broadcol3 {
+    flex: 0 0 100% ;
+    border-bottom: var(--innerborder) solid var(--blue);
+    overflow-wrap: anywhere ; 
+    box-sizing: border-box ;
+}
+
+.enh_broadfield {
+    padding: .5ex 1ex ;
+}
+
+.enh_labeled {
+    width: 100% ;
+}
+
+.enh_labeled3 {
+    width: auto ;
+}
+
+.enh_oneliner {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.enh_multiliner {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.enh_labname {
+    padding: 1.5ex 1ex ;
+    min-height: 1em; 
+    font-size: 133%;
+    border-top: none ;
+    font-weight: bold ;
+/*    position: absolute ;
+    top: 50% ;
+    transform: translateY(-50%) ; */
+}
+
+.short {
+  white-space: nowrap;
+  overflow: hidden ; 
+  min-width: 99% ;
+  max-width: 99% ;
+  text-overflow: ellipsis;
+  color: green ; 
+}
+
+.long {
+
+}
+
+.enh_univname {
+    padding: .2ex 1ex ;
+    font-weight: bold ;
+    align-self: center ;
+}
+
+.enh_RI_logo {
+    max-height: 8em ;
+    margin: auto ;
+    width: 100% ;
+    max-width: 100% ;
+    display: block ;
+    text-align: center ;
+    border: 0pt ; 
+    box-sizing: border-box ;
+    padding: .33em ;
+}
+
+.noPictures {
+    text-align: left ;
+}
+
+.enh_RI_pict {
+    margin: auto ;
+    width: 100% ;
+    max-width: 100% ;
+    text-align: center ;
+    box-sizing: border-box ;
+    padding: .33em ;
+}
+
+.enh_logoadjust {
+    object-fit: contain ;
+    height: 5em ;
+    width: 100% ;
+    max-width: 100% ; 
+}
+
+.enh_pictadjust {
+    object-fit: contain ;
+@media print {
+    max-height: 13vh ;
+}
+@media screen {
+    max-height: 13em ;
+}
+    max-width: 100% ;
+}
+
+.logo-Chalmers {
+    border: .1em .1em ;
+}
+
+.logo-Polimi {
+    padding: 0em 1em ;
+}
+
+.logo2-Polimi {
+    margin: 0em 0em ;
+    object-fit: cover ;
+    object-position: 50% 50%;
+    width: 18em;
+    height: 5em;
+}
+
+.logo-NTNU, .logo-RWTH, .logo-WUT {
+    padding: 1em 3em ;
+}
+
+.enh_logo {
+    flex: 0 0 33.4% ;
+ /*   border: .2ex solid green; */
+    background-color: white ;
+    border-left: var(--innerborder) solid var(--blue) ; 
+    border-bottom: var(--innerborder) solid var(--blue) ; 
+    box-sizing: border-box ;
+}
+
+.enh_leftborder {
+    border-left: var(--innerborder) solid var(--blue) ;
+    box-sizing: border-box ;
+}
+
+.enh_bottomborder:not(:last-of-type) { 
+    border-bottom: var(--innerborder) solid var(--blue) ;
+    box-sizing: border-box ;
+}
+
+.enh_RICatalog {
+    color: white ;
+    position: absolute;
+    text-align: center;
+    width: 100% ;
+}
+
+.enh_RI {
+    color: white ;
+    font-size: 133% ;
+    font-family: sans-serif ;
+    line-height: 50% ; 
+    vertical-align: 5% ; 
+    font-weight: 900 ;
+}
+
+.enh_label {
+    color: #4472c4 ;
+    padding: .5ex 1ex ;
+    font-size: 80% ;
+    font-family: sans-serif ;
+}
+
+.enh_oneliner {
+    overflow: hidden ;
+    text-overflow: clip ; 
+}
+
+.shortfield {
+    border-bottom: var(--innerborder) solid var(--blue) ;
+    padding: .2ex 1ex ; 
+}
+
+div.leftcol {
+    flex: 0 0 75% ;
+    padding: 1ex ; 
+    border-right: var(--innerborder) solid var(--blue) ;
+    overflow-wrap: anywhere ; 
+}
+
+a.weblink {
+    border: 2px solid var(--blue) ;
+    border-radius: 3px ;
+    background-color: white  ;
+    padding: 0em .4em ; 
+}
+
+div.maincat {
+@media print {
+    flex: 0 0 100% ;
+}
+@media screen {
+    flex: 0 0 75% ;
+}
+    /*    padding: 0ex 1ex ;  */
+    padding: 0pt ;
+    margin: 0pt ; 
+    overflow-y: scroll;
+    height: var(--fullheight) */
+}
+
+:root::-webkit-scrollbar {
+    position: absolute;
+    width: 10px ; 
+    left: 0;
+}
+div.innersidebar {
+    padding: 0pt 1em ; 
+}
+div.sidebar {
+    font-family: sans-serif ; 
+    font-size: 90% ;
+    padding-left: 0ex ;
+    margin-left: 0ex ; 
+    flex: 0 0 25% ;
+    overflow-y: scroll;
+    height: var(--fullheight) ;
+@media print {
+    display: none;
+}
+}
+
+div.sidebar ul {
+    padding-top: 0em ;
+    margin-top: 0em ;
+    padding-left: 1.5em ; 
+}
+
+div.sidebar .bigger-headline {
+    font-weight: bold ;
+    font-size: 150% ;
+    margin-top: .33ex ;
+    margin-bottom: 1ex ;
+}
+
+div.sidebar .sidebar-headline {
+    font-weight: bold ;
+    margin-top: 1ex ;
+}
+
+div.fullwidth {
+    display: flex ;
+    margin: 0ex ;
+    padding: 0ex ; 
+    height: var(--fullheigth) ;
+    width: var(--showwidth) ; 
+    max-width: var(--showwidth) ; 
+}
+
+body {
+    margin: 0pt ;
+    padding: 0pt ;
+    width: auto ;
+}
+
+.filterDiv {
+  display: block; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
